@@ -1,9 +1,18 @@
 const express = require('express');
 const bodyParser = require('body-parser');
+const mongoose = require('mongoose');
 const routes = require('./routes/routes');
 const app = express();
 
+// Use ES6 promises
+mongoose.Promise = global.Promise;
+if(process.env.NODE_ENV !== 'test') {
+    mongoose.connect('mongodb://localhost/uber');
+}
+
 app.use(bodyParser.json());
+
+// App Routes
 routes(app);
 
 module.exports = app;
