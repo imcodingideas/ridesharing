@@ -1,7 +1,8 @@
-const assert = require('assert');
-const request = require('supertest');
-const mongoose = require('mongoose');
-const app = require('../../app');
+const 
+    assert = require('assert'),
+    request = require('supertest'),
+    mongoose = require('mongoose'),
+    app = require('../../app');
 
 const Driver = mongoose.model('driver');
 

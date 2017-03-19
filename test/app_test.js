@@ -1,6 +1,7 @@
-const assert = require('assert');
-const request = require('supertest');
-const app = require('../app');
+const 
+    assert = require('assert'),
+    request = require('supertest'),
+    app = require('../app');
 
 describe('The express app', () => {
     it('handles a get request to /api', (done) => {
