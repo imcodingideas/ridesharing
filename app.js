@@ -16,4 +16,9 @@ app.use(bodyParser.json());
 // App Routes
 routes(app);
 
+// Handling Errors
+app.use((err, req, res, next) => {
+    res.status(422).send({ error: err.message });
+});
+
 module.exports = app;
